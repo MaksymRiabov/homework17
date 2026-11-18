@@ -17,7 +17,8 @@ if (!(checkSum && tipSize)) {
   const tipPercentage = tipSize * 0.01;
   let tip = checkSum * tipPercentage;
   tip = Number(tip.toFixed(2));
-  const total = checkSum + tip;
+  let total = checkSum + tip;
+  total = total.toFixed(2);
   alert(`Check sum: ${checkSum}
 
 Tip: ${tipSize}%
