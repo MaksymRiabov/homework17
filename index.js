@@ -1,7 +1,7 @@
 let checkSum = prompt('What is the check sum?');
 let tipSize = prompt('What is the tip percentage?');
 
-if (!(checkSum && tipSize)) {
+if (checkSum === null || tipSize === null) {
   alert('Cancelled');
 } else if (
   isNaN(checkSum) ||
@@ -20,10 +20,7 @@ if (!(checkSum && tipSize)) {
   let total = checkSum + tip;
   total = total.toFixed(2);
   alert(`Check sum: ${checkSum}
-
 Tip: ${tipSize}%
-
 Tip amount: ${tip}
-
 Total sum to pay: ${total}`);
 }
